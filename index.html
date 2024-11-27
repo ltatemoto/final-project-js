@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Hangman - Final Project</title>
+        <link rel="stylesheet" href="css/styles.css">
+
+        
+        <!-- Fonts by Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap" rel="stylesheet">
+
+        <script src="js/jQuery3.7.js" defer></script>
+        <script src="js/jQuery/actions.js" defer></script>
+
+    </head>
+    <body>
+        <div class="wrapper">
+            <header>
+                <h1>HANGMAN</h1>
+                <h2>Authors: Luiz Tatemoto A01396704 | Andre Balassiano A01387418</h2>
+            </header>
+
+            <main>
+                <div class="game-container">
+
+                    <div class="hangman-container">
+                        <img class="hangman-img" src="img/hangman-0.jpg" alt="hangman-0">
+                    </div>
+                    
+                    <div class="letters-container">
+                        <ul class="letters" id="letters">
+
+                        </ul>
+                    </div>
+
+                    <p class="status"></p>
+                    <ul class="used-letters">
+                    </ul>
+                    <p class="points">points: 0</p>
+
+                    <div class="controls">
+                        <button id="new-word">Play Again</button>
+                        <button id="verify-word">Verify</button>
+                        <button id="tip">Tip!</button>
+
+                        <!-- <button id="test-btn">TEST</button> -->
+                    </div>
+
+                    
+                </div>
+
+                <div class="pop-up">
+                    <button class="close-pop-up">X</button>
+                    <h2>You win!</h2>
+                </div>
+            </main>
+            
+            <footer>
+                <p>&#169;2024 Luiz Tatemoto | Andre Balassiano</p>
+            </footer>
+        </div>
+    </body>
+
+</html>

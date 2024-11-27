@@ -1,0 +1,210 @@
+// @import url("normalize.css");
+
+$color1: #eae2b7;
+$color2: #d62828;
+$color3: #003049;
+$color4: #f77f00;
+$color5: #fcbf49;
+$color6: greenyellow;
+
+@mixin box-shadow($x-offset: 0px, $y-offset: 4px, $blur: 6px, $spread: 0px, $color: rgba(0, 0, 0, 0.2)) {
+    box-shadow: $x-offset $y-offset $blur $spread $color;
+  }
+
+html{
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+img {
+    height: auto;
+    width: 100%;
+}
+
+ul {
+    margin: 0;
+}
+
+body {
+    font-family:'SUSE', 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+    color: $color3;
+    background-color: $color3;
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    max-width: 1080px;
+    margin: auto;
+    
+}
+
+header, footer {
+    background-color: $color5;
+    // height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em;
+    
+}
+
+h1 {
+    color: $color2;
+    text-shadow: 2px 2px $color3;
+    font-size: 3em;
+    margin: 0;
+    padding: 0
+}
+
+h2 {
+    font-size: 1.2em;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin: 0;
+}
+
+.controls {
+    margin: 0;
+
+}
+
+main {
+    flex: 1;
+    border: solid $color2 4px;
+    background-color: $color1;
+    
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+
+}
+
+.used-letters {
+    list-style-type: "| ";
+    display: flex;
+    height: 2em;
+
+    li {
+        margin: 0.5em;
+    }
+}
+
+
+
+.hangman-container {
+    border: solid 4px $color4;
+    padding: 6px;
+    margin-top: 20px;
+    background-color: $color3;
+    max-width: 300px;
+}
+
+.letters {
+    list-style-type: none;
+    display: flex;
+    font-size: 2em;
+    margin: 0.5em;
+    padding: 0;
+
+    li:hover {
+        cursor: pointer;
+    }
+}
+
+.letters li {
+    margin: 0 0.1em;
+    padding: 0.1em;
+    text-align: center;
+    border: solid ;
+    width: 1.5em;
+    height: 1.6em;
+}
+
+.controls {
+    margin: 2em;
+}
+
+.correct {
+    background-color: $color6;
+}
+
+.selected {
+    background-color: $color5;
+}
+
+button {
+    border-radius: 10px;
+    padding: 15px;
+    margin: 1em;
+    color: $color3;
+    font-weight: 600;
+
+    @include box-shadow(0px, 4px, 15px, 0px, $color3);
+
+}
+
+button:hover {
+    cursor:pointer;
+}
+
+
+
+#new-word {
+    background-color: $color6;
+}
+
+#verify-word, #tip {
+    background-color: $color5;
+}
+
+button:active {
+    @include box-shadow(0px, 0px, 8px, 0px, $color2);
+}
+
+
+.pop-up {
+    display: none;
+    
+    height: auto;
+    position: absolute;
+    margin: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $color2;
+    border: solid $color3 4px;
+    color: $color6;
+    
+    width: 200px;
+    height: 200px;
+
+    padding: 2em;
+    padding-top: 6em;
+
+}
+
+.close-pop-up {
+    position: absolute;
+    right: 1px;
+    top: 1px;
+    border-radius: 50px;
+
+}
+
+
+
+
